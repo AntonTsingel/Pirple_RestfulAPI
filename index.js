@@ -40,6 +40,9 @@ var server = http.createServer(function(req,res){
         payload =typeof(payload) == 'object' ? payload: {};
 
         var payloadString = JSON.stringify(payload);
+
+
+        res.setHeader('Content-type', 'application/json');
         res.writeHead(statusCode);
         res.end(payloadString);
 
