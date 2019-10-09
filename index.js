@@ -7,7 +7,7 @@ var fs = require('fs');
 var _data = require('./lib/data');
 
 
-_data.update('test','newFile',{'fizz':'buzz'}, function(err){
+_data.delete('test','newFile',function(err){
     console.log('this was the error',err);
 });
 
