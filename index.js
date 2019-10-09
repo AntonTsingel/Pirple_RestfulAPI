@@ -4,6 +4,13 @@ var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var config = require('./config');
 var fs = require('fs');
+var _data = require('./lib/data');
+
+
+_data.create('test','newFile',{'foo' : 'bar'}, function(err){
+    console.log('this was the error',err);
+});
+
 
 var httpServer = http.createServer(function(req,res){
   unifiedServer(req,res);
@@ -27,22 +34,18 @@ httpsServer.listen(config.httpsPort, function(){
 });
 
 
-
-
-
-
 var unifiedServer = function(req,res){
 
      
    var parsedUrl = url.parse(req.url,true);
    
    var path = parsedUrl.pathname;
+   
    var trimmedPath = path.replace(/^\/+|\/+$/g,'');
    
    var queryStringObject = parsedUrl.query;
 
    var method = req.method.toLowerCase();
-
 
    var headers = req.headers;
 
@@ -81,12 +84,8 @@ var unifiedServer = function(req,res){
        console.log('Returning this response: ',statusCode, payloadString); 
        });
 
-
-
    });
     
-
-
 };
 
 var handlers = {};
