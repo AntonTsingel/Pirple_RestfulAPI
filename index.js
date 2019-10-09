@@ -7,7 +7,7 @@ var fs = require('fs');
 var _data = require('./lib/data');
 
 
-_data.create('test','newFile',{'foo' : 'bar'}, function(err){
+_data.update('test','newFile',{'fizz':'buzz'}, function(err){
     console.log('this was the error',err);
 });
 
@@ -40,7 +40,7 @@ var unifiedServer = function(req,res){
    var parsedUrl = url.parse(req.url,true);
    
    var path = parsedUrl.pathname;
-   
+
    var trimmedPath = path.replace(/^\/+|\/+$/g,'');
    
    var queryStringObject = parsedUrl.query;
