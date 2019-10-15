@@ -1,5 +1,4 @@
 //import { METHODS } from "http";
-
 var app = {};
 
 app.config = {
@@ -85,7 +84,7 @@ app.bindLogoutButton = function(){
   
     // Get the current token id
     var tokenId = typeof(app.config.sessionToken.id) == 'string' ? app.config.sessionToken.id : false;
-  
+    
     // Send the current token to the tokens endpoint to delete it
     var queryStringObject = {
       'id' : tokenId
