@@ -1,8 +1,12 @@
+
+process.env.NODE_ENV = 'testing';
+
 _app = {};
 
 _app.tests = {};
 
 _app.tests.unit = require('./unit');
+_app.tests.api = require('./api');
 
 
 _app.countTests = function(){
@@ -88,6 +92,7 @@ _app.produceTestReport = function(limit,successes,errors) {
 
     console.log("");
     console.log("-------END TEST REPORT-------");
+    process.exit(0);
 };
 
 
