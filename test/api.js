@@ -31,7 +31,7 @@ api['app.init shold start without throwing'] = function(done) {
         app.init(function(err){
             done();
         });
-    },TypeError)
+    },TypeError);
 };
 
 api['/ping shold respond to GET with 200'] = function(done){
