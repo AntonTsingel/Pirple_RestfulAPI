@@ -213,6 +213,10 @@ body,p,h1,h2,h3,h4,h5,h6,div,span,header,footer,img,a,a:hover,a:active,a:visited
     width: 100%;
   }
   
+  .input_left-side {
+    width: auto;
+  }
+
   .checkboxGroup input{
     display: inline-block;
     width: initial;
