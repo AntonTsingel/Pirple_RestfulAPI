@@ -6,7 +6,6 @@ var options = {
     'ca' : fs.readFileSync(path.join(__dirname,'/../https/cert.pem'))
 };
 
-
 var outboundMessage = 'ping';
 
 var client = tls.connect(6000,options,function(){
