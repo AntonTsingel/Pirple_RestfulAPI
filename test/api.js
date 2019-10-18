@@ -26,7 +26,7 @@ helpers.makeGetRequest = function(path,callback){
     req.end();
 };
 
-api['app.init shold start without throwing'] = function(done) {
+api['app.init shold start without throwing'] = function(done){
     assert.doesNotThrow(function(){
         app.init(function(err){
             done();

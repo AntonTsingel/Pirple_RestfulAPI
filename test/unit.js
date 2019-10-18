@@ -31,7 +31,6 @@ unit['logs.list should callback a false error and an array of log names'] = func
         assert.ok(logFileNames.length > 0);
         done();
     });
-
 };
 
 unit['logs.truncate should not throw if the logId does not exist. It should callback an error instead'] = function(done){
